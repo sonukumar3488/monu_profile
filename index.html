@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="sonu kumar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+  <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon -->
+  <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+  <title>Monu Kumar</title>
+  <style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Animated Background */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  /* Animation for the background */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  #projects {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .project-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .project-info p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Animated Background */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    background-size: 300% 300%;
+    z-index: -1;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  /* Animation for the background */
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  #projects {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .project-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .project-info p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  
+  </style>
+</head>
+
+<body oncontextmenu="return false">
+
+  <header>
+    <b style="font-size: xx-large;">MONU KUMAR</b>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Gallery</a></li>
+        <li><a href="#education">Documents</a></li>
+        <!-- <li><a href="#Project">Project</a></li> -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- hero section starts -->
+  <section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+      <h2>Hi There,<br /> I'm Monu <span>Kumar</span></h2>
+      <p>i am <span class="typing-text"></span></p>
+      <h3 style="font-size: x-large; color: rgb(83, 38, 41);">
+
+        My Name Is Monu Kumar. I Come From Devangarh In Nawada District, Bihar, And I Am Currently A Bachelor Of Arts (B.A.) Student.
+        
+        About Me</h3>
+      <a href="#about" class="btn"><span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+      <div class="socials">
+        <ul class="social-icons">
+         
+                <li><a class="whatsapp" aria-label="WhatsApp" href="https://wa.me/+918409737350" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+
+          <li><a class="instagram" aria-label="Instagram" href="https://https://www.instagram.com/its_vipmonu_xx"><i
+                class="fab fa-instagram" target="_blank"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="image">
+      <img draggable="false" class="tilt" src="./image/1.jpg" alt="image">
+    </div>
+  </section>
+ 
+  <!-- about section starts -->
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+    <div class="row">
+
+      <div class="image">
+        <img draggable="false" class="tilt" src="./image/2.jpg" alt="">
+      </div>
+      <div class="content">
+        <h3>I'm Monu Kumar</h3>
+        
+        <p style="text-align: justify;">
+          
+          मोनू कुमार बिहार से हैं और अभी बी.ए. की पढ़ाई कर रहे हैं। वह महत्वाकांक्षी और विनम्र स्वभाव के हैं। मोनू आत्मविकास में रुचि रखते हैं और अपने सपनों को पूरा करने के लिए पूरी मेहनत और लगन से आगे बढ़ रहे हैं। उनका व्यक्तित्व ऐसा है जो लोगों को प्रेरित करता है।
+          <br>
+          <br>
+          "हमारे अंदाज़ की बात ही कुछ और है. दुनिया को बदलने का हुनर रखते हैं। जहां खड़े हो जाएं, रास्ते खुद बनते हैं. क्योंकि हम दिलों पर राज करने का जिगर रखते हैं।"
+          <br>
+          <br>
+          "सपने बड़े हैं. इरादे ओर भी बड़े हैं। जो सोचते हैं हम गिर जाएंगे. वो खुद हमारे कदमों में पड़े हैं।" </p>
+          <br>
+          <br>
+
+       <h1>Success is not the key to happiness. Happiness is the key to success.</h1>
+        <div class="box-container">
+        
+          <div class="box">
+            <p><span> email : </span> <a href="mailto:divakarkumar8409737350@gmail.com">divakarkumar8409737350@gmail.com</a></p>
+            <p><span> Mobile No : </span> <a href="tel:8409737350">+91 8409737350</a> </p>
+          </div>
+        </div>
+
+        <div class="resumebtn">
+          <a href="tel:8409737350" 
+            class="btn"><span>Call Me</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+    <div class="container">
+        <div class="content">
+            <div class="image-box">
+                <img draggable="false" src="./assets/images/contact1.png" alt="">
+            </div>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+              
+                <input type="hidden" name="access_key" value="fd8ffb01-fee9-4e75-81ac-bb59aecc2892">
+
+                <div class="form-group">
+                    <div class="field">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <i class='fas fa-user'></i>
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <i class='fas fa-envelope'></i>
+                    </div>
+                    <div class="field">
+                        <input type="text" name="phone" placeholder="Phone">
+                        <i class='fas fa-phone-alt'></i>
+                    </div>
+                    <div class="message">
+                        <textarea placeholder="Message" name="message" required></textarea>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                </div>
+                <input type="text" name="botcheck" class="hidden" style="display: none;"> 
+                <div class="button-area">
+                    <button type="submit">
+                        Submit <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>Monu Kumar </h3>
+        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br /> Keep Rising
+          🚀. Connect with me over live chat!</p>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+        
+    
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <p> <i class="fas fa-phone" ></i>+91 8409737350</p>
+        <p> <i class="fas fa-envelope"></i>divakarkumar8409737350@gmail.com</p>
+        <p> <i class="fas fa-map-marked-alt"></i>Hahapur</p>
+        <div class="share">
+
+        </div>
+      </div>
+    </div>
+
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
+        href="https://www.linkedin.com/in/sonu-kumar-5a8439309/">Monu Kumar</a></h1>
+
+  </section>
+
+
+  <!-- scroll top btn -->
+  <!-- <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>  -->
+  <!-- scroll back to top -->
+
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- typed.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
+    integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- particle.js links -->
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <!-- vanilla tilt.js links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
+    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- scroll reveal anim -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
